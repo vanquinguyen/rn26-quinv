@@ -1,0 +1,86 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+:root {
+    --percent-40: 40%;
+    --percent-35: 35%;
+    --percent-70: 70%;
+    --percent-60: 60%;
+    --percent-55: 55%;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+
+}
+
+.today {
+    text-align: center;
+    background-color: rgb(243, 248, 252);
+    width: 22%;
+    box-shadow: 5px 3px 5px 3px #ccc;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.day {
+    text-align: -webkit-center;
+}   
+
+.chart-layout {
+    width: 30px;
+    height: 150px;
+    display: flex;
+    justify-items: flex-end;
+    align-items: flex-end;
+    border: 1px solid #ccc;
+    margin-bottom: 16px; 
+}
+
+h1{
+    color: rgb(0, 250, 250);
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.heading {
+    padding-top: 30px;
+}
+
+.bg-thu{
+    background-color: rgb(49, 200, 221);
+    height: var(--percent-70);
+    width: 30px;  
+}
+
+.bg-mon {
+    background-color: rgb(247, 83, 84);
+    height: var(--percent-40);
+    width: 30px;
+}
+
+.bg-tue {
+    background-color: rgb(80, 212, 102);
+    height: var(--percent-35);
+    width: 30px;
+}
+
+.bg-wed {
+    background-color: rgb(252, 212, 24);
+    height: var(--percent-60);
+    width: 30px;
+}
+
+.bg-fri {
+    background-color: rgb(247, 129, 83);
+    height: var(--percent-55);
+    width: 30px;
+}

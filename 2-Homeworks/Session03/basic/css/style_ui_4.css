@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+}
+
+.section {
+    width: calc(25% - 20px);
+    margin-left: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 1px 3px #ccc;
+    border: 1px solid #ccc;
+}
+
+.content {
+    padding: 20px 20px 20px 20px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info {
+    
+}
+
+.info .info-list {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ccc;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.contact {
+    margin-top: 16px;
+}
+
+.contact .email {
+    padding: 1px 0px 1px 20px;
+    color: #fff;
+    box-shadow: 5px 5px 1px 2px rgb(231, 230, 230);
+}
+
+.contact .phone {
+    padding: 1px 10px 1px 20px; 
+    margin-top: 16px;
+    color: #fff;
+    box-shadow: 5px 5px 1px 2px rgb(231, 230, 230);
+}
+
+.contact span {
+    padding-left: 5px;
+}
+
+.bg-red {
+    background-color: rgb(247, 83, 82);
+}
+
+.bg-green {
+    background-color: rgb(81, 213, 103);
+}
+
+.bg-bluelight {
+    background-color: rgb(49, 200, 221);
+}
+
+.bg-blue {
+    background-color: rgb(97, 156, 236);
+}
+
+.bg-orange {
+    background-color: rgb(247, 129, 83);
+}
+
+.bg-yellow {
+    background-color: rgb(252, 213, 24);
+}
+
+.bg-pinklight {
+    background-color: rgb(203, 121, 231);
+}
+
+.bg-pink {
+    background-color: rgb(254, 96, 232)
+}
+

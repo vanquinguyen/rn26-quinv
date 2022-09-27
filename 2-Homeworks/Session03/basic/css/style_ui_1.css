@@ -1,0 +1,102 @@
+/* *{
+    margin: 0;
+    box-sizing: border-box;
+}
+.red {
+    display: flex;
+    margin: 12px 0;
+}
+
+.bandwidth {
+    width: 200px;
+}
+.bandwidth p{
+    color: #fff;
+    background-color: rgb(125, 22, 22);
+    padding: 12px 0;
+    text-align: center;
+}
+.percent{
+    width: 500px;
+    background-color: #ccc;
+    border: 0px solid #ccc;
+    
+}
+.percent p {
+    width: 20%; 
+    color: #fff;
+    background-color: red;
+    padding: 12px 0;
+    padding-left: 10px;
+} */
+
+:root{
+    --percent-25: 25%;
+    --percent-50: 50%;
+    --percent-70: 70%;
+    --percent-30: 30%;
+    --percent-45: 45%;
+    --percent-80: 80%;
+    --percent-37: 37%;
+}
+
+.container{
+    margin-top: 32px;
+    color: #fff;
+    text-transform: uppercase; 
+}
+
+.row {
+    width: 500px;   
+}
+
+.row .col:nth-child(1) {
+    text-align: right; 
+    line-height: 30px;
+}
+.row .col:nth-child(2){
+    padding: 0;
+    background-color: rgb(242, 234, 234);
+    line-height: 30px;
+}
+
+.percent {
+    height: 30px;
+    padding-left: 20px;
+    opacity: 0.9; 
+}
+
+.bandwidth {
+    background-color: rgb(229, 77, 76);
+    width: var(--percent-25);
+}
+
+.storage {
+    background-color: rgb(45, 184, 205);
+    width: var(--percent-50);
+}
+
+.user {
+    background-color: rgb(45, 194, 94);
+    width: var(--percent-70);
+}
+
+.visitor {
+    background-color: rgb(45, 184, 205);
+    width: var(--percent-30);
+}
+
+.email {
+    background-color: rgb(203, 195, 24);
+    width: var(--percent-45);
+}
+
+.basic {
+    background-color: rgb(187, 112, 213);
+    width: var(--percent-80);
+}
+
+.other{
+    background-color: rgb(88, 144, 218);
+    width: var(--percent-37);
+}

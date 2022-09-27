@@ -1,0 +1,50 @@
+* {
+   
+    text-transform: capitalize;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+/* .fa-regular {
+    margin: auto;
+}
+.main{
+    
+} */
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.arrow {
+    line-height: 100px;
+}
+
+.fa-lightbulb, .fa-desktop, .fa-code, .fa-square-check{
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.fa-arrow-right-long {
+    font-size: 25px;
+    color: rgb(135, 140, 146);
+}
+
+.bg-idea{
+    background-color: rgb(247, 83, 82);
+}
+
+.bg-prototype{
+    background-color: rgb(49, 200, 221);
+}
+
+.bg-code{
+    background-color: rgb(81, 213, 103);
+}
+
+.bg-testing{
+    background-color: rgb(203, 121, 231);
+}

@@ -1,0 +1,63 @@
+
+
+
+.main {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 800px;
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 24px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.fa-brands {
+    font-weight: bold !important;
+}
+
+.fa-html5, .fa-css3-alt, .fa-dropbox, .fa-java, .fa-basketball {
+    margin: auto;
+    color: aliceblue;  
+}
+
+.progress{
+    width: 500px;
+    margin-left: 70px;
+    flex-basis: 1;
+
+}
+
+.icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+}
+
+.bg-css{
+    background-color: rgb(247, 83, 82) !important;
+}
+
+.bg-php{
+    background-color: rgb(49, 200, 221) !important;
+}
+
+.bg-html{
+    background-color: rgb(81, 213, 103) !important;
+}
+
+.bg-net{
+    background-color: rgb(203, 121, 231) !important;
+}
+
+.bg-java {
+    background-color: rgb(252, 213, 24) !important;
+}
