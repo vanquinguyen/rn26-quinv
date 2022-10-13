@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/day6_form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header-list">
+                <div><a href="./day6.html">Home</a></div>
+                <div><a href="./day6_userList.html">User List</a></div>
+                <div><a href="./day6_form.html">User Form</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <form onsubmit="return false">
+                <label>Email:</label>
+                <input type="email" placeholder="Email" id="input__email"><br><br>
+                <label>Password:</label>
+                <input type="password" placeholder="password" id="input__password"><br><br>
+                <input type="checkbox" onclick="myFunction()">Show Password <br>
+                <br>
+                <input type="checkbox" name="Remember me" id="">
+                <label>Remember me</label>
+                <br>
+                <button id="reset" onclick="resetForm()">Reset</button>
+                <button type="submit" value="Submit" onclick="handleSubmit()">Submit</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>This web page is a part of a demonstration of fluid web design made by www.w3schools.com. Resize the
+                browser window to see the content response to the resizing.</p>
+        </div>
+    </div>
+
+    <script>
+
+        const EMAIL = 'admin@gmail.com';
+        const PASSWORD = 'admin';
+
+
+        function myFunction() {
+            var x = document.getElementById("input__password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        // -----------------------------------------
+
+        function handleSubmit() {
+            var elementEmail = document.getElementById('input__email').value;
+            var elementPassword = document.getElementById('input__password').value;
+
+            if(elementEmail === EMAIL && elementPassword === PASSWORD) {
+                alert('Login Successfully!');
+            }
+            else alert('Login Fail')
+
+        }
+        // --------------------------------
+        function resetForm() {
+            // JSDOC
+            var btnReset = document.getElementById('reset'); // res = elm
+            var inputs = document.querySelectorAll('input'); // res = elm[] 
+            //inputs[index] inputs = [inputemail, inputpass]
+
+            inputs.forEach(input => input.value = '');
+                // inputs[0].value ='' 
+                 // inputs[1].value ='' 
+        }
+
+
+
+        var tam = '';
+        for(var i = 1; i <= 5; i++){
+                tam += '*';
+                console.log(tam);
+        }
+
+
+    </script>
+</body>
+
+</html>
