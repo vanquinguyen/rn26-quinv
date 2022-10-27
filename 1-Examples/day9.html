@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        td.crossed {
+            background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), black, transparent calc(50% + 1px));
+        }
+
+        .item {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bg__ccc {
+            background-color: #ccc;
+        }
+
+        .text__white {
+            color: white;
+        }
+
+        .div__container {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-75 m-auto mt-3">
+        <table  id="table_users" class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="./js/day9.js"></script>
+</body>
+
+</html>

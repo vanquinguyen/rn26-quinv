@@ -27,13 +27,14 @@
 }
 
 .content table{
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 tr, th, td{
     height: 40px;
+    padding: 10px;
 }
 
 table, th, td{
@@ -50,28 +51,24 @@ tr:nth-child(even) {
     background-color: #ccc;
 }
 
+.btn2,
 .btn1{
     background-color: green;
-    padding: 10px;
+    padding: 10px 16px;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
 }
+
+.btn2:hover,
 .btn1:hover{
     background-color: coral;
 }
 
-.btn2 {
-    background-color: red;
-    padding: 10px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-}
-.btn2:hover{
-    background-color: coral;
-}
 
+.btn2{
+    background-color: red;
+}
 
 .footer{
     background-color: #f1f1f1; 
@@ -80,7 +77,7 @@ tr:nth-child(even) {
     line-height: 80px;
     margin-top: 20px;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
 }
 
