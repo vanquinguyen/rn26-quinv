@@ -35,7 +35,7 @@
     <!-- <header></header> -->
     <!-- <iframe class="w-100" style="height: 70px;" src="./header.html" seamless></iframe> -->
     <form id="myForm" class="w-50 m-auto mt-3" onclick="return false">
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="input__name" class="form-label">Name</label>
             <input type="name" class="form-control" name="name" id="input__name"
                 onblur="console.log('onblur',this.value)">
@@ -53,7 +53,7 @@
 
 
         <button type="reset" class="btn btn-primary">Reset</button>
-        <button onclick="handleSubmit(this)" id="btn_submit" class="btn btn-success">Submit</button>
+        <button onclick="handleSubmit(this)" class="btn btn-success">Submit</button> -->
         <!-- <button onclick="handleReset()" class="btn btn-secondary">Reset DOM</button> -->
     </form>
     <footer></footer>
@@ -61,40 +61,9 @@
     <!-- <script src="./bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script> -->
     <!-- <script src="./js/home.js"></script> -->
+
+    <script src="./js/form1.js"></script>
     <script>
-
-        // Check validate
-        // var settings = {
-        //     rules: {
-        //         name: {
-        //             required: true,
-        //             name: true,
-        //             minlength: 6,
-        //         },
-        //     },
-        //     messages: {
-        //         name: {
-        //             required: 'Bạn chưa nhập name',
-        //             // minlength: jQuery.validator.format('Toi thieu co {0} ky tu'),
-        //             name: 'name khong hop le',
-        //         } 
-        //     },
-        // };
-
-        // var validator = $('#myForm').validate(settings);
-
-        // post
-        // function handleReset() {
-        //     let elementInputEmail = document.getElementById('input__name');
-        //     let elementInputPassword = document.getElementById('input__lastName');
-        //     let elementInputCheckBox = document.getElementById('input__checkbox');
-        //     if (elementInputEmail) {
-        //         elementInputEmail.value = '';
-        //     }
-        //     if (elementInputCheckBox) {
-        //         elementInputCheckBox.checked = false;
-        //     }
-        // }
 
         function handleSubmit(event) {
             let elementInputName = document.getElementById('input__name');
@@ -105,69 +74,11 @@
                 age: elementInputAge?.value,
                 address: elementInputAddress?.value,
             }
-
-            let id = getIdUrl();
-            if (id) {
-                putData(objectUser, id);
-            } else {
-                postData(objectUser);
-            }
-
             // console.log(objectUser);
-            // postData(objectUser)
+            postData(objectUser)
             return false;
         }
-        function postData(user) {
-            fetch("https://634ea39cf34e1ed826920b12.mockapi.io/person", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(user),
-            })
-                .then((response) => response.json())
-                .then((res) => console.log(res))
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
-        }
-
-        // update
-
-        window.onload = function () {
-            let id = getIdUrl();
-            // getUser();
-            getUser(id);
- 
-        };
-
-        function getUser() {
-            let id = getIdUrl();
-            fetch("https://634ea39cf34e1ed826920b12.mockapi.io/person/" + id, {
-                method: "GET",
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data);
-                    document.getElementById("input__name").value = data.name;
-                    document.getElementById("input__age").value = data.age;
-                    document.getElementById("input__address").value = data.address;
-                    document.getElementById('btn_submit').textContent = 'Update';
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
-            console.log(id);
-        }
-        function getIdUrl() {
-            let url = new URL(window.location.href);
-            let id = url.searchParams.get("id");
-            return id;
-        }
-
-
-
-        function putData(user, id) {
+        function update(user) {
             fetch("https://634ea39cf34e1ed826920b12.mockapi.io/person/" + id, {
                 method: "PUT",
                 headers: {
@@ -181,6 +92,7 @@
                     console.error("Error:", error);
                 });
         }
+
 
     </script>
 </body>

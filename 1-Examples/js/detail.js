@@ -4,7 +4,7 @@ window.onload = function () {
 
 function getUser() {
   let id = getIdUrl();
-  fetch("https://634ea39cf34e1ed826920b12.mockapi.io/user/" + id, {
+  fetch("https://634ea39cf34e1ed826920b12.mockapi.io/person/" + id, {
     method: "GET",
   })
     .then((response) => response.json())
@@ -26,10 +26,18 @@ function getIdUrl() {
 
 function renderInfo(user) {
   const contentHTML = `
-    <p>${user?.id}</p>
-    <p>${user?.name}</p>
-    <p>${user?.avatar}</p>
+    <p>ID: ${user?.id}</p>
+    <p>Name: ${user?.name}</p>
+    <p>Age: ${user?.age}</p>
+    <p>Address: ${user?.address}</p>
+    <button onclick="gotoUpdate(${user?.id})">Update</button>
   `;
   const elm = document.getElementById("info");
   elm.innerHTML = contentHTML;
+}
+
+
+function gotoUpdate(id) {
+  console.log(window.location.href, id);
+  window.location.href = "./form.html?id=" + id;
 }
